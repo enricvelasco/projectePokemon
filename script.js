@@ -32,6 +32,7 @@ function getPikachuData () {
 	})
 }
 
+
 function getPokemonData (pokemonURL) {
 	return new Promise(function (resolve){
 		fetch(pokemonURL)
