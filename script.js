@@ -53,9 +53,11 @@ getAllPokemons().then(function(response) {
 		const pokemon = allPokemonList[i]
 		getPokemonData(pokemon.url).then(function (pokemonData) {
 			console.log('POKEMON_DATA', pokemonData)
-			pokemonCustomList.push(pokemonData.name)
-			pokemonCustomList.push(pokemonData.order)
-			pokemonCustomList.push(pokemonData.weight)
+			const obj = { name: pokemonData.name, order: pokemonData.order, weight: pokemonData.weight };
+			pokemonCustomList.push(obj);
+			// pokemonCustomList.push(pokemonData.name)
+			// pokemonCustomList.push(pokemonData.order)
+			// pokemonCustomList.push(pokemonData.weight)
 		})
 	}
 })
